@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+html {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Figtree', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template:
+    "content" 1fr
+    "footer" auto;
+    background-color: #00082e;
+    color: white;
+}
+a {
+    color: #dad7a0;
+    /* background-color: #9cadbc; */
+}
+
+.content-container {
+    grid-area: content;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p {
+    padding: 0 2rem;
+}
+
+.logo {
+    display: inline-block;
+    height: 30px;
+}
+
+.until {
+    padding: 2rem 2rem 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    justify-content: center;
+}
+
+.timer * {
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+}
+
+.timer {
+    position: relative;
+    height: 19rem;
+    width: 19rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.timer::before {
+    position: absolute;
+    content: '';
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    transform: rotateX(45deg) rotateZ(45deg);
+    box-shadow: 0px 0px 12px #c8fafb;
+    background-color: #979ea4;
+}
+
+.timer::after {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    content: '';
+    height: calc(100% - 22px);  /* -22px is 2 * 10px gap on either side - 2px border on either side */
+    width: calc(100% - 22px);  /* -22px is 2 * 10px gap on either side - 2px border on either side */
+    border: 1px solid #fffdcc;
+    transform: rotateX(45deg) rotateZ(45deg);
+    background-color: #01075d;
+}
+
+a:focus-visible {
+    outline: 3px solid;
+}
+
+h3 {
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+footer p {
+    padding: 0 2rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width:475px) {
+    .timer {
+        width: 17rem;
+        height: 17rem;
+    }
+}
+
+@media screen and (max-width:490px) {
+    .until {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .until * {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:387px) {
+    .timer {
+        width: 16rem;
+        height: 16rem;
+    }
+}
+
+@media screen and (max-width:363px) {
+    .timer {
+        width: 15rem;
+        height: 15rem;
+    }
+}
+
+@media screen and (max-width:340px) {
+    html {
+        font-size: 16px;
+    }
+    .timer {
+        width: 13rem;
+        height: 13rem;
+    }
+}

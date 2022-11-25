@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>When's Doctor Who?</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content-container">
+    <div id="timer" class="timer">
+      <h1 id="days"></h1>
+      <h3 id="hours"></h3>
+      <p id="minsec"></p>
+    </div>
+    <div id="until" class="until"><h2>Until the next</h2><img src="logo.png" alt="Doctor Who" class="logo"><h2> episode</h2></div>
+  </div>
+
+  <footer>
+    <p>Assuming it airs on the <strong>23<sup>rd</sup> of November 2023 at 7:30pm GMT</strong></p>
+    <p>Follow me <a target="_blank" href="https://twitter.com/random_dw">@random_dw</a></p>
+  </footer>
+
+
+<script>
+var countDownDate = new Date(Date.UTC(2023, 10, 23, 19, 30, 0)); 
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+    
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("days").innerHTML = days + " Days";
+  document.getElementById("hours").innerHTML = hours + " Hours";
+  document.getElementById("minsec").innerHTML = minutes + " Minutes and " + seconds + " Seconds";
+
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "<h1>THE NEW EPISODE IS OUT!</h1>";
+  }
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("until").innerHTML = "";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
+
