@@ -6,13 +6,14 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="content-container">
-    <div id="timer" class="timer">
-      <h1 id="days"></h1>
-      <h3 id="hours"></h3>
-      <p id="minsec"></p>
-    </div>
-    <div id="until" class="until"><h2>Until the next</h2><img src="logo.png" alt="Doctor Who" class="logo"><h2> episode</h2></div>
+    <div class="content-container">    
+      <div id="timer" class="timer">
+          <h1 id="days"></h1>
+          <h3 id="hours"></h3>
+          <p id="minsec"></p>
+        </div>
+    <div id="textblock" class="textblock"><div class="row"><h2>Until the next</h2><img src="logo.png" alt="Doctor Who" class="logo"><h2> episode:</h2></div>
+    <h1 class="ep-title">The Star Beast</h1></div>
   </div>
 
   <footer>
@@ -41,11 +42,11 @@ var x = setInterval(function() {
 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("timer").innerHTML = "<h1>THE NEW EPISODE IS OUT!</h1>";
+    document.getElementById("timer").innerHTML = "<h1 class='ep-title'>The Star Beast</h1><h2>is out now!</h2>";
   }
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("until").innerHTML = "";
+    document.getElementById("textblock").innerHTML = "<h2>Watch it on <a target='_blank' href='https://www.bbc.co.uk/iplayer/episodes/b006q2x0/doctor-who'>iPlayer</a> in the UK, and <a target='_blank' href='https://disneyplus.com'>Disney Plus</a> everywhere else.</h2>";
   }
 }, 1000);
 </script>
