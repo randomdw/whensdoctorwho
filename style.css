@@ -54,7 +54,7 @@ p {
     flex-direction: column;
     padding: 2rem 2rem 0 2rem;
     align-items: center;
-    gap: 1em;
+    gap: 0;
 }
 
 .row {
