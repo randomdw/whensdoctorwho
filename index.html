@@ -49,7 +49,7 @@ var x = setInterval(function() {
   }
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("textblock").innerHTML = "<h2>Watch it on <a target='_blank' href='https://www.bbc.co.uk/iplayer/episodes/b006q2x0/doctor-who'>iPlayer</a> in the UK, and <a target='_blank' href='https://disneyplus.com'>Disney Plus</a> everywhere else.</h2>";
+    document.getElementById("textblock").innerHTML = '<div class="row"><p>Watch it on <a target="_blank" href="https://www.bbc.co.uk/iplayer/episodes/b006q2x0/doctor-who">iPlayer</a> in the UK, and <a target="_blank" href="https://disneyplus.com">Disney+</a> everywhere else.</p></div> <div class="row"><p>Episode 2, <b><i>Wild Blue Yonder</i></b>, airs on the <b>2nd of December</b>.</p></div>';
   }
 }, 1000);
 </script>
