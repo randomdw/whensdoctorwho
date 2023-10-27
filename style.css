@@ -64,6 +64,10 @@ p {
     justify-content: center;
 }
 
+.row p {
+    text-align: center;
+}
+
 .ep-title {
     font-style: italic;
     margin: 0;
@@ -139,6 +143,10 @@ footer p {
 }
 
 @media screen and (max-width:500px) {
+    .textblock {
+        gap: 1rem;
+    }
+    
     .row {
         flex-direction: column;
         gap: 0;
